@@ -1,0 +1,131 @@
+body {
+    font-family: 'Inter', sans-serif;
+    color: #333; /* Color de texto por defecto */
+}
+
+/* Estilo para la imagen de fondo del Hero Section */
+.bg-hero-pattern {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("https://www.bbva.com/wp-content/uploads/2020/12/eficiencia_energetica-1920x1180.jpg");
+    /* Imagen de ejemplo de Unsplash - Puedes cambiarla por una propia */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    animation: fadeInBackground 1.5s ease-out forwards; /* Animación de carga */
+}
+
+/* Animación para el Hero Section */
+@keyframes fadeInBackground {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+/* Custom scroll-to-top button */
+#scrollToTopBtn {
+    display: none; /* Hidden by default */
+    position: fixed; /* Fixed position */
+    bottom: 20px; /* Place at the bottom */
+    right: 20px; /* Place at the right */
+    z-index: 99; /* Ensure it's above other content */
+    border: none; /* Remove borders */
+    outline: none; /* Remove outline */
+    background-color: #28a745; /* Green background */
+    color: white; /* White text */
+    cursor: pointer; /* Add a mouse pointer on hover */
+    padding: 15px; /* Some padding */
+    border-radius: 50%; /* Rounded corners */
+    font-size: 18px; /* Increase font size */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease, transform 0.3s ease, opacity 0.3s ease; /* Transiciones mejoradas */
+    opacity: 0; /* Oculto por defecto para animación */
+    transform: translateY(20px); /* Ligeramente desplazado para animación */
+}
+
+#scrollToTopBtn.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+#scrollToTopBtn:hover {
+    background-color: #218838; /* Darker green on hover */
+    transform: translateY(-5px); /* Pequeño efecto de elevación */
+}
+
+/* Animation for mobile menu */
+.mobile-menu-transition {
+    transition: max-height 0.5s ease-in-out, opacity 0.5s ease-in-out;
+    overflow: hidden;
+}
+.mobile-menu-closed {
+    max-height: 0;
+    opacity: 0;
+}
+.mobile-menu-open {
+    max-height: 500px; /* Adjust as needed to fit content */
+    opacity: 1;
+}
+
+/* Custom Animations using Tailwind's arbitrary values */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes fadeAndSlideInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes bounceIn {
+    0%, 20%, 40%, 60%, 80%, 100% {
+        transition-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+    }
+    0% {
+        opacity: 0;
+        transform: scale3d(.3, .3, .3);
+    }
+    20% {
+        transform: scale3d(1.1, 1.1, 1.1);
+    }
+    40% {
+        transform: scale3d(.9, .9, .9);
+    }
+    60% {
+        opacity: 1;
+        transform: scale3d(1.03, 1.03, 1.03);
+    }
+    80% {
+        transform: scale3d(.97, .97, .97);
+    }
+    100% {
+        opacity: 1;
+        transform: scale3d(1, 1, 1);
+    }
+}
+
+/* Tailwind custom utilities for animations */
+.animate-fade-down {
+    animation: fadeAndSlideInUp 0.7s ease-out forwards;
+}
+
+.animate-fade-in-up {
+    animation: fadeAndSlideInUp 0.8s ease-out forwards;
+}
+
+.animate-bounce-in {
+    animation: bounceIn 1s ease-out forwards;
+}
+
+.animate-pulse-once {
+    animation: pulse 1s cubic-bezier(0.4, 0, 0.6, 1) 1; /* Pulso una vez */
+}
+
+/* Ensure smooth scroll behavior is enabled */
+html {
+    scroll-behavior: smooth;
+}
