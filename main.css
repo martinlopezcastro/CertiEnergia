@@ -163,7 +163,10 @@ html {
     max-width: 400px; /* Ajusta el ancho máximo si es necesario */
     width: 100%; /* Asegura que ocupe el ancho disponible */
     cursor: pointer; /* Indica que la tarjeta es clickeable */
+
 }
+
+
 
 .service-card-inner {
     position: relative;
