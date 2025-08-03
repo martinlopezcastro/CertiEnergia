@@ -111,3 +111,67 @@ animateElements.forEach(element => {
     element.style.animationPlayState = 'paused'; // Pause animations initially
     observer.observe(element);
 });
+
+document.addEventListener('DOMContentLoaded', () => {
+    const carouselSlides = document.getElementById('carousel-slides');
+    const prevBtn = document.getElementById('prev-btn');
+    const nextBtn = document.getElementById('next-btn');
+    const carouselDots = document.getElementById('carousel-dots');
+    const totalSlides = carouselSlides.children.length;
+    let currentIndex = 0;
+
+        // Función para actualizar la posición del carrusel
+    function updateCarousel() {
+            const offset = -currentIndex * 33.33;
+            carouselSlides.style.transform = `translateX(${offset}%)`;
+            updateDots();
+        }
+
+        // Función para actualizar los puntos de navegación
+        function updateDots() {
+            carouselDots.innerHTML = ''; // Limpiar puntos existentes
+            for (let i = 0; i < totalSlides; i++) {
+                const dot = document.createElement('span');
+                dot.classList.add('carousel-dot');
+                if (i === currentIndex) {
+                    dot.classList.add('active');
+                }
+                dot.addEventListener('click', () => {
+                    currentIndex = i;
+                    updateCarousel();
+                });
+                carouselDots.appendChild(dot);
+            }
+        }
+
+        // Event Listeners para los botones de navegación
+        prevBtn.addEventListener('click', () => {
+            currentIndex = (currentIndex - 1 + totalSlides) % totalSlides;
+            updateCarousel();
+        });
+
+        nextBtn.addEventListener('click', () => {
+            currentIndex = (currentIndex + 1) % totalSlides;
+            updateCarousel();
+        });
+
+        // Inicializar carrusel y puntos
+        updateCarousel();
+
+
+    // Flip card functionality for service cards
+    // Selecciona todos los contenedores de tarjetas de servicio
+    const serviceCardContainers = document.querySelectorAll('.service-card-container');
+
+    // Itera sobre cada contenedor y añade un event listener
+    serviceCardContainers.forEach(cardContainer => {
+        cardContainer.addEventListener('click', (event) => {
+            // Asegúrate de que el clic no provenga de un enlace dentro de la tarjeta
+            if (event.target.tagName === 'A') {
+                return; // Si es un enlace, no voltees la tarjeta, deja que el enlace funcione
+            }
+            // Alterna la clase 'flipped' en el contenedor para activar la animación
+            cardContainer.classList.toggle('flipped');
+        });
+    });
+});

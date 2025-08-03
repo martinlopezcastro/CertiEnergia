@@ -129,3 +129,156 @@ body {
 html {
     scroll-behavior: smooth;
 }
+
+/* Estilos para los puntos del carrusel */
+.carousel-dot {
+    width: 12px;
+    height: 12px;
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.carousel-dot.active {
+    background-color: white;
+}
+
+/* Estilos para asegurar que el carrusel ocupe el espacio adecuado */
+#carousel-slides {
+    display: flex;
+    width: 300%; /* 100% * número de diapositivas */
+    transition: transform 0.5s ease-in-out;
+}
+
+#carousel-slides > div {
+    width: 33.33%; /* Cada diapositiva ocupa 1/3 del ancho del contenedor de slides */
+    flex-shrink: 0;
+}
+
+/* Estilos para las tarjetas de servicio con efecto flip */
+.service-card-container {
+    perspective: 1000px; /* Define la perspectiva para el efecto 3D */
+    height: 700px; /* Aumenta la altura fija para las tarjetas */
+    max-width: 400px; /* Ajusta el ancho máximo si es necesario */
+    width: 100%; /* Asegura que ocupe el ancho disponible */
+    cursor: pointer; /* Indica que la tarjeta es clickeable */
+}
+
+.service-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s; /* Duración de la animación de flip */
+    transform-style: preserve-3d; /* Permite que los elementos hijos se posicionen en 3D */
+}
+
+.service-card-container.flipped .service-card-inner {
+    transform: rotateY(180deg); /* Gira la tarjeta 180 grados en el eje Y */
+}
+
+.service-card-front,
+.service-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden; /* Oculta la parte trasera durante la rotación */
+    backface-visibility: hidden; /* Oculta la parte trasera durante la rotación */
+    border-radius: 0.75rem; /* rounded-xl de Tailwind */
+    padding: 2rem; /* p-8 de Tailwind */
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05); /* shadow-lg de Tailwind */
+    display: flex; /* Para centrar contenido */
+    flex-direction: column; /* Para organizar contenido verticalmente */
+    justify-content: center; /* Centra el contenido verticalmente */
+    align-items: center; /* Centra el contenido horizontalmente */
+    overflow: hidden; /* Asegura que el contenido no se desborde durante el flip */
+}
+
+.service-card-front {
+    background-color: #ffffff; /* Fondo blanco */
+    color: #333; /* Color de texto */
+    z-index: 2;
+}
+
+.service-card-back {
+    /* Fondo con gradiente más atractivo */
+    background-color: #10B981; /* Un verde más oscuro para el reverso */
+    color: #ffffff; /* Texto blanco para el reverso */
+    transform: rotateY(180deg); /* Inicialmente girado para que no se vea */
+    display: flex; /* Asegura que el contenido se centre */
+    flex-direction: column;
+    justify-content: flex-start; /* Alinea el contenido al inicio de la tarjeta */
+    align-items: flex-start; /* Alinea el contenido a la izquierda */
+    padding: 2.5rem; /* Aumenta el padding para más espacio */
+    text-align: left; /* Asegura que el texto dentro del reverso se alinee a la izquierda */
+}
+
+.service-card-back h3 {
+    color: #ffffff; /* Asegura que el título sea blanco en el reverso */
+    margin-bottom: 1rem; /* Espacio debajo del título */
+    font-size: 1.875rem; /* Aumenta el tamaño del título (text-3xl) */
+    font-weight: 700; /* Bold (font-bold) */
+    text-align: center; /* Centra el título */
+    width: 100%; /* Asegura que el título ocupe todo el ancho para centrarlo */
+}
+
+.service-card-back p {
+    font-size: 1.05rem; /* Ajusta el tamaño del texto del párrafo ligeramente */
+    line-height: 1.6; /* Mejora la legibilidad */
+    margin-bottom: 1.25rem; /* Más espacio debajo del párrafo */
+    color: #e0ffe0; /* Un tono de blanco verdoso para el texto */
+}
+
+.service-card-back ul {
+    list-style-type: none; /* Elimina los puntos por defecto */
+    padding-left: 0; /* Elimina la indentación por defecto */
+    margin-top: 1rem; /* Espacio arriba de la lista */
+    width: 100%; /* Asegura que la lista ocupe todo el ancho */
+}
+
+.service-card-back li {
+    margin-bottom: 0.75rem; /* Más espacio entre los ítems de la lista */
+    font-size: 0.95rem; /* Ajusta el tamaño de la fuente de la lista */
+    position: relative;
+    padding-left: 1.5rem; /* Espacio para el icono de la lista */
+    color: #ccffcc; /* Un tono de blanco verdoso más claro para los ítems */
+}
+
+.service-card-back li::before {
+    content: '\2713'; /* Símbolo de checkmark Unicode */
+    position: absolute;
+    left: 0;
+    color: #ffffff; /* Color blanco para el checkmark */
+    font-weight: bold;
+}
+
+/* Estilos para el texto "Saber más" y "Volver" */
+.service-card-front span,
+.service-card-back span {
+    cursor: pointer;
+    background: none;
+    border: none;
+    padding: 0;
+    font-size: 1rem; /* Tamaño de fuente consistente */
+    font-weight: 600; /* Semibold */
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: color 0.3s ease;
+    margin-top: auto; /* Empuja el "Saber más" o "Volver" al final */
+}
+
+.service-card-front span {
+    color: #10B981; /* Verde para el frente */
+}
+
+.service-card-back span {
+    color: #ffffff; /* Blanco para el reverso */
+}
+
+.service-card-front span:hover,
+.service-card-back span:hover {
+    text-decoration: underline;
+}
