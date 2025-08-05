@@ -43,17 +43,58 @@
     </header>
 
     <main>
-        <section id="inicio" class="bg-hero-pattern text-white py-24 md:py-36 text-center rounded-b-lg shadow-inner flex items-center justify-center min-h-[60vh]">
-            <div class="container mx-auto px-6 max-w-5xl">
-                <h1 class="text-4xl md:text-6xl font-extrabold leading-tight mb-6 drop-shadow-xl animate-fade-in-up">
-                    Impulsa tu <span class="text-green-300">Sostenibilidad</span> con Certificación Energética
-                </h1>
-                <p class="text-lg md:text-xl mb-10 max-w-3xl mx-auto drop-shadow-lg animate-fade-in-up delay-200">
-                    <b>CERTIFICAMOS ENERGÍA, CONSTRUIMOS CONFIANZA.</b>
-                </p>
-                <a href="#contacto" class="inline-block bg-green-600 hover:bg-green-700 text-white font-bold py-4 px-10 rounded-full text-xl transition duration-300 transform hover:scale-105 shadow-2xl animate-bounce-in delay-400">
-                    <i class="fas fa-file-invoice-dollar mr-3"></i> Solicita tu Evaluación
-                </a>
+        <section id="inicio" class="bg-hero-pattern text-white py-16 md:py-24 text-center rounded-b-lg shadow-inner flex items-center justify-center min-h-[80vh] relative overflow-hidden">
+            <div class="container mx-auto px-6 flex flex-col md:flex-row items-center justify-center gap-12 relative z-10">
+                <!-- Contenido de texto a la izquierda -->
+                <div class="md:w-1/2 text-left md:text-center lg:text-left">
+                    <h1 class="text-4xl md:text-6xl font-extrabold leading-tight mb-6 drop-shadow-xl animate-fade-in-up">
+                        Impulsa tu <span class="text-green-300">Sostenibilidad</span> con Certificación Energética
+                    </h1>
+                    <p class="text-lg md:text-xl mb-10 max-w-3xl mx-auto drop-shadow-lg animate-fade-in-up delay-200">
+                        <b>CERTIFICAMOS ENERGÍA, CONSTRUIMOS CONFIANZA.</b>
+                    </p>
+                    <!-- El botón "Solicita tu Evaluación" ha sido eliminado según tu solicitud. -->
+                </div>
+
+                <!-- Formulario de contacto a la derecha -->
+                <div class="md:w-1/2 mt-12 md:mt-0 bg-white p-8 md:p-10 rounded-xl shadow-2xl border-t-4 border-green-500 text-gray-800">
+                    <h2 class="text-2xl md:text-3xl font-bold mb-6 text-center">Cuéntanos sobre tu Proyecto</h2>
+                    <p class="text-gray-700 text-base mb-6 leading-relaxed text-center">
+                        ¿Quieres saber más sobre cómo podemos ayudarte o tienes alguna pregunta? Rellena el formulario.
+                    </p>
+                    <form action="./enviar.php" method="POST" class="grid grid-cols-1 gap-6 text-left">
+                        <div>
+                            <label for="nombre-inicio" class="block text-gray-700 text-sm font-bold mb-2">Tu Nombre Completo <span class="text-red-500">*</span></label>
+                            <input type="text" id="nombre-inicio" name="nombre" class="shadow-sm border border-gray-300 rounded-lg w-full py-3 px-4 text-gray-800 leading-tight focus:outline-none focus:ring-2 focus:ring-green-400 focus:border-transparent transition duration-200" placeholder="Tu Nombre" required>
+                        </div>
+                        <div>
+                            <label for="email-inicio" class="block text-gray-700 text-sm font-bold mb-2">Tu Correo Electrónico <span class="text-red-500">*</span></label>
+                            <input type="email" id="email-inicio" name="email" class="shadow-sm border border-gray-300 rounded-lg w-full py-3 px-4 text-gray-800 leading-tight focus:outline-none focus:ring-2 focus:ring-green-400 focus:border-transparent transition duration-200" placeholder="tu@email.com" required>
+                        </div>
+                        <div>
+                            <label for="telefono-inicio" class="block text-gray-700 text-sm font-bold mb-2">Teléfono (Opcional)</label>
+                            <input type="tel" id="telefono-inicio" name="telefono" class="shadow-sm border border-gray-300 rounded-lg w-full py-3 px-4 text-gray-800 leading-tight focus:outline-none focus:ring-2 focus:ring-green-400 focus:border-transparent transition duration-200" placeholder="+XX XXXXXXXXX">
+                        </div>
+                        <div>
+                            <label for="servicio-inicio" class="block text-gray-700 text-sm font-bold mb-2">Qué Servicio te Interesa <span class="text-red-500">*</span></label>
+                            <select id="servicio-inicio" name="servicio" class="shadow-sm border border-gray-300 rounded-lg w-full py-3 px-4 text-gray-800 leading-tight focus:outline-none focus:ring-2 focus:ring-green-400 focus:border-transparent transition duration-200" required>
+                                <option value="">Elige un servicio</option>
+                                <option value="ISO 50001">Certificación ISO 50001</option>
+                                <option value="Asesoramiento Eficiencia Energetica">Asesoramiento en Eficiencia Energética</option>
+                                <option value="Otro">Otro / Pregunta General</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label for="mensaje-inicio" class="block text-gray-700 text-sm font-bold mb-2">Tu Mensaje <span class="text-red-500">*</span></label>
+                            <textarea id="mensaje-inicio" name="mensaje" rows="4" class="shadow-sm border border-gray-300 rounded-lg w-full py-3 px-4 text-gray-800 leading-tight focus:outline-none focus:ring-2 focus:ring-green-400 focus:border-transparent transition duration-200" placeholder="Cuéntanos en detalle qué necesitas o qué preguntas tienes..." required></textarea>
+                        </div>
+                        <div class="text-center">
+                            <button type="submit" class="bg-green-600 hover:bg-green-700 text-white font-bold py-3 px-8 rounded-full text-lg transition duration-300 transform hover:scale-105 shadow-xl flex items-center justify-center mx-auto">
+                                Enviar Solicitud <i class="fas fa-paper-plane ml-3"></i>
+                            </button>
+                        </div>
+                    </form>
+                </div>
             </div>
         </section>
 
@@ -158,51 +199,51 @@
             </div>
         </section>
 
-<section id="proceso" class="py-16 md:py-24 bg-blue-50">
-    <div class="container mx-auto px-6 text-center">
-        <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-12">Nuestro Proceso de Trabajo</h2>
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <div class="relative flex flex-col items-center p-6 bg-white rounded-xl shadow-lg hover:shadow-xl transition duration-300 transform hover:-translate-y-2">
-                <div class="bg-blue-600 text-white rounded-full w-16 h-16 flex items-center justify-center text-3xl font-bold mb-4 shadow-md border-4 border-blue-200">1</div>
-                <h3 class="text-xl font-semibold text-gray-800 mb-2">Diagnóstico Energético:</h3>
-                <p class="text-gray-600 text-center">
-                    Identificar el estado actual del proyecto en términos energéticos, detectando puntos críticos de pérdida energética y proponer mejoras.
-                </p>
-                <div class="absolute right-0 top-[56px] hidden lg:block w-1/2 h-1 bg-blue-300 transform translate-x-1/2 -translate-y-1/2 after:content-[''] after:absolute after:top-1/2 after:right-0 after:-translate-y-1/2 after:border-solid after:border-t-8 after:border-b-8 after:border-l-8 after:border-t-transparent after:border-b-transparent after:border-l-blue-300"></div>
-            </div>
-            
-            <div class="relative flex flex-col items-center p-6 bg-white rounded-xl shadow-lg hover:shadow-xl transition duration-300 transform hover:-translate-y-2">
-                <div class="bg-blue-600 text-white rounded-full w-16 h-16 flex items-center justify-center text-3xl font-bold mb-4 shadow-md border-4 border-blue-200">2</div>
-                <h3 class="text-xl font-semibold text-gray-800 mb-2">Precalificación:</h3>
-                <p class="text-gray-600 text-center">
-                    Estimar la calificación energética que tendría, validando los estándares mínimos exigidos por la norma y permitiendo a las constructoras ajustar su diseño en base a resultados ya entregados por la empresa evaluadora.
-                </p>
-                <div class="absolute right-0 top-[56px] hidden lg:block w-1/2 h-1 bg-blue-300 transform translate-x-1/2 -translate-y-1/2 after:content-[''] after:absolute after:top-1/2 after:right-0 after:-translate-y-1/2 after:border-solid after:border-t-8 after:border-b-8 after:border-l-8 after:border-t-transparent after:border-b-transparent after:border-l-blue-300"></div>
-            </div>
-            
-            <div class="relative flex flex-col items-center p-6 bg-white rounded-xl shadow-lg hover:shadow-xl transition duration-300 transform hover:-translate-y-2">
-                <div class="bg-blue-600 text-white rounded-full w-16 h-16 flex items-center justify-center text-3xl font-bold mb-4 shadow-md border-4 border-blue-200">3</div>
-                <h3 class="text-xl font-semibold text-gray-800 mb-2">Calificación:</h3>
-                <p class="text-gray-600 text-center">
-                    Emitir la calificación energética oficial para proyectos habitacionales ya construidos o en su etapa final. Entregando los certificados e informes por vivienda, que reflejan el consumo energético estimado según diseño, envolvente térmica y sistemas instalados.
-                    <br>
-                    <br>
-                    Este proceso será obligatorio a partir de octubre de 2025 para todas las viviendas nuevas que soliciten recepción municipal, según normativa vigente del MINVU.
-                </p>
-            </div>
-        </div>
+        <section id="proceso" class="py-16 md:py-24 bg-blue-50">
+            <div class="container mx-auto px-6 text-center">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-12">Nuestro Proceso de Trabajo</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <div class="relative flex flex-col items-center p-6 bg-white rounded-xl shadow-lg hover:shadow-xl transition duration-300 transform hover:-translate-y-2">
+                        <div class="bg-blue-600 text-white rounded-full w-16 h-16 flex items-center justify-center text-3xl font-bold mb-4 shadow-md border-4 border-blue-200">1</div>
+                        <h3 class="text-xl font-semibold text-gray-800 mb-2">Diagnóstico Energético:</h3>
+                        <p class="text-gray-600 text-center">
+                            Identificar el estado actual del proyecto en términos energéticos, detectando puntos críticos de pérdida energética y proponer mejoras.
+                        </p>
+                        <div class="absolute right-0 top-[56px] hidden lg:block w-1/2 h-1 bg-blue-300 transform translate-x-1/2 -translate-y-1/2 after:content-[''] after:absolute after:top-1/2 after:right-0 after:-translate-y-1/2 after:border-solid after:border-t-8 after:border-b-8 after:border-l-8 after:border-t-transparent after:border-b-transparent after:border-l-blue-300"></div>
+                    </div>
 
-        <div class="mt-8">
-            <div class="relative flex flex-col items-center p-6 bg-white rounded-xl shadow-lg hover:shadow-xl transition duration-300 transform hover:-translate-y-2">
-                <div class="bg-blue-600 text-white rounded-full w-16 h-16 flex items-center justify-center text-3xl font-bold mb-4 shadow-md border-4 border-blue-200">4</div>
-                <h3 class="text-xl font-semibold text-gray-800 mb-2">Implementación Obligatoria</h3>
-                <p class="text-gray-600 text-center">
-                    Este proceso será obligatorio a partir de octubre de 2025 para todas las viviendas nuevas que soliciten recepción municipal, según normativa vigente del MINVU.
-                </p>
+                    <div class="relative flex flex-col items-center p-6 bg-white rounded-xl shadow-lg hover:shadow-xl transition duration-300 transform hover:-translate-y-2">
+                        <div class="bg-blue-600 text-white rounded-full w-16 h-16 flex items-center justify-center text-3xl font-bold mb-4 shadow-md border-4 border-blue-200">2</div>
+                        <h3 class="text-xl font-semibold text-gray-800 mb-2">Precalificación:</h3>
+                        <p class="text-gray-600 text-center">
+                            Estimar la calificación energética que tendría, validando los estándares mínimos exigidos por la norma y permitiendo a las constructoras ajustar su diseño en base a resultados ya entregados por la empresa evaluadora.
+                        </p>
+                        <div class="absolute right-0 top-[56px] hidden lg:block w-1/2 h-1 bg-blue-300 transform translate-x-1/2 -translate-y-1/2 after:content-[''] after:absolute after:top-1/2 after:right-0 after:-translate-y-1/2 after:border-solid after:border-t-8 after:border-b-8 after:border-l-8 after:border-t-transparent after:border-b-transparent after:border-l-blue-300"></div>
+                    </div>
+
+                    <div class="relative flex flex-col items-center p-6 bg-white rounded-xl shadow-lg hover:shadow-xl transition duration-300 transform hover:-translate-y-2">
+                        <div class="bg-blue-600 text-white rounded-full w-16 h-16 flex items-center justify-center text-3xl font-bold mb-4 shadow-md border-4 border-blue-200">3</div>
+                        <h3 class="text-xl font-semibold text-gray-800 mb-2">Calificación:</h3>
+                        <p class="text-gray-600 text-center">
+                            Emitir la calificación energética oficial para proyectos habitacionales ya construidos o en su etapa final. Entregando los certificados e informes por vivienda, que reflejan el consumo energético estimado según diseño, envolvente térmica y sistemas instalados.
+                            <br>
+                            <br>
+                            Este proceso será obligatorio a partir de octubre de 2025 para todas las viviendas nuevas que soliciten recepción municipal, según normativa vigente del MINVU.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="mt-8">
+                    <div class="relative flex flex-col items-center p-6 bg-white rounded-xl shadow-lg hover:shadow-xl transition duration-300 transform hover:-translate-y-2">
+                        <div class="bg-blue-600 text-white rounded-full w-16 h-16 flex items-center justify-center text-3xl font-bold mb-4 shadow-md border-4 border-blue-200">4</div>
+                        <h3 class="text-xl font-semibold text-gray-800 mb-2">Implementación Obligatoria</h3>
+                        <p class="text-gray-600 text-center">
+                            Este proceso será obligatorio a partir de octubre de 2025 para todas las viviendas nuevas que soliciten recepción municipal, según normativa vigente del MINVU.
+                        </p>
+                    </div>
+                </div>
             </div>
-        </div>
-    </div>
-</section>
+        </section>
         <section id="beneficios" class="py-16 md:py-24 bg-green-50">
             <div class="container mx-auto px-6 text-center">
                 <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-12">Beneficios Clave para Ti</h2>
@@ -281,7 +322,7 @@
                                         <li><strong class="text-purple-700">Nueva Zonificación:</strong> El país se dividirá en 9 zonas climáticas.</li>
                                         <li><strong class="text-purple-700">Mayores Exigencias:</strong> Requisitos más estrictos para techos, muros, pisos, puertas y sobrecimientos.</li>
                                         <li><strong class="text-purple-700">Control de Condensación:</strong> Verificación obligatoria para evitar problemas de humedad.</li>
-                                        <li><strong class="text-purple-700">Hermeticidad y Ventilación:</strong> Nuevas exigencias para infiltración de aire y sistemas de ventilación.</li>
+                                        <li><strong class="text-purple-700">Hermeticidad y Ventilación:</b> Nuevas exigencias para infiltración de aire y sistemas de ventilación.</li>
                                     </ul>
                                     <a href="https://www.minvu.gob.cl/nueva-reglamentacion-termica/" target="_blank" class="inline-block mt-8 bg-purple-600 hover:bg-purple-700 text-white font-bold py-3 px-6 rounded-full transition duration-300 transform hover:scale-105">
                                         Conoce la RT 3.0
@@ -322,68 +363,7 @@
             </div>
         </section>
 
-        <section id="contacto" class="py-16 md:py-24 bg-gray-50">
-            <div class="container mx-auto px-6 text-center">
-                <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-12">Cuéntanos sobre tu Proyecto</h2>
-                <div class="max-w-4xl mx-auto bg-white p-8 md:p-12 rounded-xl shadow-2xl border-t-4 border-green-500">
-                    <p class="text-gray-700 text-lg mb-8 leading-relaxed">
-                        ¿Quieres saber más sobre cómo podemos ayudarte o tienes alguna pregunta? Rellena el formulario o llámanos directamente.
-                    </p>
-                    <form action="./enviar.php" method="POST" class="grid grid-cols-1 md:grid-cols-2 gap-8 text-left">
-                        <div>
-                            <label for="nombre" class="block text-gray-700 text-sm font-bold mb-2">Tu Nombre Completo <span class="text-red-500">*</span></label>
-                            <input type="text" id="nombre" name="nombre" class="shadow-sm border border-gray-300 rounded-lg w-full py-3 px-4 text-gray-800 leading-tight focus:outline-none focus:ring-2 focus:ring-green-400 focus:border-transparent transition duration-200" placeholder="Tu Nombre" required>
-                        </div>
-                        <div>
-                            <label for="email" class="block text-gray-700 text-sm font-bold mb-2">Tu Correo Electrónico <span class="text-red-500">*</span></label>
-                            <input type="email" id="email" name="email" class="shadow-sm border border-gray-300 rounded-lg w-full py-3 px-4 text-gray-800 leading-tight focus:outline-none focus:ring-2 focus:ring-green-400 focus:border-transparent transition duration-200" placeholder="tu@email.com" required>
-                        </div>
-                        <div class="md:col-span-2">
-                            <label for="telefono" class="block text-gray-700 text-sm font-bold mb-2">Teléfono (Opcional)</label>
-                            <input type="tel" id="telefono" name="telefono" class="shadow-sm border border-gray-300 rounded-lg w-full py-3 px-4 text-gray-800 leading-tight focus:outline-none focus:ring-2 focus:ring-green-400 focus:border-transparent transition duration-200" placeholder="+XX XXXXXXXXX">
-                        </div>
-                        <div class="md:col-span-2">
-                            <label for="servicio" class="block text-gray-700 text-sm font-bold mb-2">Qué Servicio te Interesa <span class="text-red-500">*</span></label>
-                            <select id="servicio" name="servicio" class="shadow-sm border border-gray-300 rounded-lg w-full py-3 px-4 text-gray-800 leading-tight focus:outline-none focus:ring-2 focus:ring-green-400 focus:border-transparent transition duration-200" required>
-                                <option value="">Elige un servicio</option>
-                                <option value="ISO 50001">Certificación ISO 50001</option>
-                                <option value="Asesoramiento Eficiencia Energetica">Asesoramiento en Eficiencia Energética</option>
-                                <option value="Otro">Otro / Pregunta General</option>
-                            </select>
-                        </div>
-                        <div class="md:col-span-2">
-                            <label for="mensaje" class="block text-gray-700 text-sm font-bold mb-2">Tu Mensaje <span class="text-red-500">*</span></label>
-                            <textarea id="mensaje" name="mensaje" rows="6" class="shadow-sm border border-gray-300 rounded-lg w-full py-3 px-4 text-gray-800 leading-tight focus:outline-none focus:ring-2 focus:ring-green-400 focus:border-transparent transition duration-200" placeholder="Cuéntanos en detalle qué necesitas o qué preguntas tienes..." required></textarea>
-                        </div>
-                        <div class="md:col-span-2 text-center">
-                            <button type="submit" class="bg-green-600 hover:bg-green-700 text-white font-bold py-3 px-8 rounded-full text-lg transition duration-300 transform hover:scale-105 shadow-xl flex items-center justify-center mx-auto">
-                                Enviar Solicitud <i class="fas fa-paper-plane ml-3"></i>
-                            </button>
-                        </div>
-                    </form>
-
-                    <div class="mt-10 border-t pt-8 border-gray-200">
-                        <h3 class="text-2xl font-semibold text-gray-800 mb-6">¿Prefieres que te contactemos?</h3>
-                        <div class="flex flex-col md:flex-row justify-center items-center space-y-4 md:space-y-0 md:space-x-12">
-                            <a href="tel:+1234567890" class="flex items-center text-gray-700 hover:text-green-600 transition duration-300 text-lg group">
-                                <i class="fas fa-phone-alt mr-3 text-2xl text-green-500 group-hover:scale-110 transition duration-300"></i> <span class="group-hover:underline">+1 (234) 567-890</span>
-                            </a>
-                            <a href="mailto:info@globalcev.com" class="flex items-center text-gray-700 hover:text-green-600 transition duration-300 text-lg group">
-                                <i class="fas fa-envelope mr-3 text-2xl text-green-500 group-hover:scale-110 transition duration-300"></i> <span class="group-hover:underline">info@globalcev.com</span>
-                            </a>
-                        </div>
-                        <div class="mt-10 flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-6">
-                            <a href="#contacto" class="inline-block bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-8 rounded-full text-lg transition duration-300 transform hover:scale-105 shadow-xl flex items-center justify-center">
-                                <i class="fas fa-dollar-sign mr-3"></i> Pedir Presupuesto
-                            </a>
-                            <a href="https://calendly.com/tomas28martin09/30min" target="_blank" class="inline-block bg-gray-700 hover:bg-gray-800 text-white font-bold py-3 px-8 rounded-full text-lg transition duration-300 transform hover:scale-105 shadow-xl flex items-center justify-center">
-                                <i class="fas fa-calendar-alt mr-3"></i> Agendar una Cita
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
+        <!-- La sección de contacto inferior ha sido eliminada según tu solicitud. -->
 
         <!-- Nueva sección de Ubicación -->
         <section id="ubicacion" class="py-16 md:py-24 bg-blue-50">
@@ -396,7 +376,7 @@
                     <div class="aspect-w-16 aspect-h-9 w-full rounded-lg overflow-hidden shadow-lg mb-8">
                         <!-- Mapa de Google Maps incrustado -->
                         <iframe
-                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3329.56942761858!2d-70.67295742363185!3d-33.43399459223799!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9662c5053e1a0b7b%3A0x6b7b2b2b2b2b2b2b!2sPlaza%20de%20Armas!5e0!3m2!1ses-419!2scl!4v1700000000000!5m2!1ses-419!2scl"
+                            src="https://maps.google.com/maps?q=Antonio%20Bellet%20292,%20Providencia,%20Chile&output=embed"
                             width="100%"
                             height="450"
                             style="border:0;"
@@ -409,7 +389,7 @@
                     <div class="flex flex-col md:flex-row justify-center items-center space-y-4 md:space-y-0 md:space-x-12 mt-8">
                         <div class="flex items-center text-gray-700 text-lg">
                             <i class="fas fa-map-marker-alt mr-3 text-2xl text-green-500"></i>
-                            <span>Dirección: Calle Falsa 123, Santiago, Chile</span>
+                            <span>Dirección: Antonio Bellet 292, Providencia</span>
                         </div>
                         <a href="tel:+1234567890" class="flex items-center text-gray-700 hover:text-green-600 transition duration-300 text-lg group">
                             <i class="fas fa-phone-alt mr-3 text-2xl text-green-500 group-hover:scale-110 transition duration-300"></i> <span class="group-hover:underline">+1 (234) 567-890</span>
