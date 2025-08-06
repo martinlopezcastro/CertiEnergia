@@ -33,8 +33,6 @@
                 <a href="#certificaciones" class="text-gray-700 hover:text-green-600 font-medium transition duration-300 py-2 w-full text-center">Certificaciones</a>
                 <a href="#proceso" class="text-gray-700 hover:text-green-600 font-medium transition duration-300 py-2 w-full text-center">Proceso</a>
                 <a href="#beneficios" class="text-gray-700 hover:text-green-600 font-medium transition duration-300 py-2 w-full text-center">Beneficios</a>
-                <a href="#blog" class="text-gray-700 hover:text-green-600 font-medium transition duration-300 py-2 w-full text-center">Recursos</a>
-                <a href="#contacto" class="text-gray-700 hover:text-green-600 font-medium transition duration-300 py-2 w-full text-center">Contacto</a>
                 <a href="#ubicacion" class="text-gray-700 hover:text-green-600 font-medium transition duration-300 py-2 w-full text-center">Ubicación</a>
             </nav>
         </div>
@@ -62,12 +60,12 @@
                     </p>
                     <form action="./enviar.php" method="POST" class="grid grid-cols-1 gap-6 text-left">
                         <div>
-                            <label for="nombre-inicio" class="block text-gray-700 text-sm font-bold mb-2">Tu Nombre Completo <span class="text-red-500">*</span></label>
-                            <input type="text" id="nombre-inicio" name="nombre" class="shadow-sm border border-gray-300 rounded-lg w-full py-3 px-4 text-gray-800 leading-tight focus:outline-none focus:ring-2 focus:ring-green-400 focus:border-transparent transition duration-200" placeholder="Tu Nombre" required>
+                            <label for="nombre-inicio" class="block text-gray-700 text-sm font-bold mb-2">Nombre Completo <span class="text-red-500">*</span></label>
+                            <input type="text" id="nombre-inicio" name="nombre" class="shadow-sm border border-gray-300 rounded-lg w-full py-3 px-4 text-gray-800 leading-tight focus:outline-none focus:ring-2 focus:ring-green-400 focus:border-transparent transition duration-200" placeholder="Nombre" required>
                         </div>
                         <div>
-                            <label for="email-inicio" class="block text-gray-700 text-sm font-bold mb-2">Tu Correo Electrónico <span class="text-red-500">*</span></label>
-                            <input type="email" id="email-inicio" name="email" class="shadow-sm border border-gray-300 rounded-lg w-full py-3 px-4 text-gray-800 leading-tight focus:outline-none focus:ring-2 focus:ring-green-400 focus:border-transparent transition duration-200" placeholder="tu@email.com" required>
+                            <label for="email-inicio" class="block text-gray-700 text-sm font-bold mb-2">Correo Electrónico <span class="text-red-500">*</span></label>
+                            <input type="email" id="email-inicio" name="email" class="shadow-sm border border-gray-300 rounded-lg w-full py-3 px-4 text-gray-800 leading-tight focus:outline-none focus:ring-2 focus:ring-green-400 focus:border-transparent transition duration-200" placeholder="Ejemplo@email.com" required>
                         </div>
                         <div>
                             <label for="telefono-inicio" class="block text-gray-700 text-sm font-bold mb-2">Teléfono (Opcional)</label>
@@ -77,13 +75,12 @@
                             <label for="servicio-inicio" class="block text-gray-700 text-sm font-bold mb-2">Qué Servicio te Interesa <span class="text-red-500">*</span></label>
                             <select id="servicio-inicio" name="servicio" class="shadow-sm border border-gray-300 rounded-lg w-full py-3 px-4 text-gray-800 leading-tight focus:outline-none focus:ring-2 focus:ring-green-400 focus:border-transparent transition duration-200" required>
                                 <option value="">Elige un servicio</option>
-                                <option value="ISO 50001">Certificación energética de vivienda</option>
-                                <option value="Asesoramiento Eficiencia Energetica">Consultas e información</option>
-                                <option value="Otro">Otro / Pregunta General</option>
+                                <option value="ISO 50001">Calificación Energética de Vivienda</option>
+                                <option value="Asesoramiento Eficiencia Energetica">Asesorías de Eficiencia Energética<n/option>
                             </select>
                         </div>
                         <div>
-                            <label for="mensaje-inicio" class="block text-gray-700 text-sm font-bold mb-2">Tu Mensaje <span class="text-red-500">*</span></label>
+                            <label for="mensaje-inicio" class="block text-gray-700 text-sm font-bold mb-2">Mensaje <span class="text-red-500">*</span></label>
                             <textarea id="mensaje-inicio" name="mensaje" rows="4" class="shadow-sm border border-gray-300 rounded-lg w-full py-3 px-4 text-gray-800 leading-tight focus:outline-none focus:ring-2 focus:ring-green-400 focus:border-transparent transition duration-200" placeholder="Cuéntanos en detalle qué necesitas o qué preguntas tienes..." required></textarea>
                         </div>
                         <div class="text-center">
@@ -106,7 +103,7 @@
                     <p class="text-gray-700 text-lg leading-relaxed mb-6">
                         Nuestra misión es ofrecer servicios de certificación energética precisos, confiables y accesibles, que permitan a propietarios, empresas y profesionales del sector inmobiliario optimizar el consumo energético de sus inmuebles, aumentar su valor y contribuir activamente a la sostenibilidad ambiental cumpliendo las exigencias térmicas actuales y futuras. Trabajamos con compromiso, transparencia y rigor técnico para garantizar eficiencia y confianza en cada evaluación.
                     </p>
-                    <a href="#contacto" class="inline-block bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-8 rounded-full text-lg transition duration-300 transform hover:scale-105 shadow-md">
+                    <a href="#inicio" class="inline-block bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-8 rounded-full text-lg transition duration-300 transform hover:scale-105 shadow-md">
                         Conoce más sobre nosotros
                     </a>
                 </div>
@@ -224,19 +221,6 @@
                         <h3 class="text-xl font-semibold text-gray-800 mb-2">Calificación:</h3>
                         <p class="text-gray-600 text-center">
                             Emitir la calificación energética oficial para proyectos habitacionales ya construidos o en su etapa final. Entregando los certificados e informes por vivienda, que reflejan el consumo energético estimado según diseño, envolvente térmica y sistemas instalados.
-                            <br>
-                            <br>
-                            Este proceso será obligatorio a partir de octubre de 2025 para todas las viviendas nuevas que soliciten recepción municipal, según normativa vigente del MINVU.
-                        </p>
-                    </div>
-                </div>
-
-                <div class="mt-8">
-                    <div class="relative flex flex-col items-center p-6 bg-white rounded-xl shadow-lg hover:shadow-xl transition duration-300 transform hover:-translate-y-2">
-                        <div class="bg-blue-600 text-white rounded-full w-16 h-16 flex items-center justify-center text-3xl font-bold mb-4 shadow-md border-4 border-blue-200">4</div>
-                        <h3 class="text-xl font-semibold text-gray-800 mb-2">Implementación Obligatoria</h3>
-                        <p class="text-gray-600 text-center">
-                            Este proceso será obligatorio a partir de octubre de 2025 para todas las viviendas nuevas que soliciten recepción municipal, según normativa vigente del MINVU.
                         </p>
                     </div>
                 </div>
@@ -245,10 +229,21 @@
         <section id="beneficios" class="py-16 md:py-24 bg-green-50">
             <div class="container mx-auto px-6 text-center">
                 <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-12">Beneficios Clave para Ti</h2>
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+
                     <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition duration-300 transform hover:-translate-y-2">
-                        <div class="text-green-600 mb-4 text-6xl font-extrabold flex items-center justify-center">
-                            <i class="fas fa-lightbulb mr-3"></i> 30%
+                        <div class="text-red-600 mb-4 text-4xl font-extrabold flex items-center justify-center">
+                            <i class="fas fa-home mr-3"></i> Certificado
+                        </div>
+                        <h3 class="text-2xl font-semibold text-gray-800 mb-3">Implementación Obligatoria</h3>
+                        <p class="text-gray-600">
+                            Este proceso será obligatorio a partir de octubre de 2025 para todas las viviendas nuevas que soliciten recepción municipal, según normativa vigente del MINVU.
+                        </p>
+                    </div>
+
+                    <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition duration-300 transform hover:-translate-y-2">
+                        <div class="text-green-600 mb-4 text-4xl font-extrabold flex items-center justify-center">
+                            <i class="fas fa-lightbulb mr-3"></i>30%
                         </div>
                         <h3 class="text-2xl font-semibold text-gray-800 mb-3">Ahorro de Energía</h3>
                         <p class="text-gray-600">
@@ -256,8 +251,8 @@
                         </p>
                     </div>
                     <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition duration-300 transform hover:-translate-y-2">
-                        <div class="text-blue-600 mb-4 text-6xl font-extrabold flex items-center justify-center">
-                            <i class="fas fa-leaf mr-3"></i> Menos
+                        <div class="text-blue-600 mb-4 text-4xl font-extrabold flex items-center justify-center">
+                            <i class="fas fa-leaf mr-3"></i>Menos
                         </div>
                         <h3 class="text-2xl font-semibold text-gray-800 mb-3">Menor Huella Ambiental</h3>
                         <p class="text-gray-600">
@@ -265,8 +260,8 @@
                         </p>
                     </div>
                     <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition duration-300 transform hover:-translate-y-2">
-                        <div class="text-purple-600 mb-4 text-6xl font-extrabold flex items-center justify-center">
-                            <i class="fas fa-sack-dollar mr-3"></i> Más Valor
+                        <div class="text-purple-600 mb-4 text-4xl font-extrabold flex items-center justify-center">
+                            <i class="fas fa-dollar mr-3"></i>Más Valor
                         </div>
                         <h3 class="text-2xl font-semibold text-gray-800 mb-3">Aumenta el Valor</h3>
                         <p class="text-gray-600">
@@ -426,7 +421,7 @@
                 <a href="#" class="text-gray-400 hover:text-green-400 transition duration-300 text-2xl" aria-label="Síguenos en Instagram"><i class="fab fa-instagram"></i></a>
             </div>
             <div class="mt-6 text-sm text-gray-500">
-                <a href="#" class="hover:underline mr-4">Política de Privacidad</a>
+                <a href="./politica.html" target="_blank" class="hover:underline mr-4">Política de Privacidad</a>
                 <a href="#" class="hover:underline">Términos de Servicio</a>
             </div>
         </div>
